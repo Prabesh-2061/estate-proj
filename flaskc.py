@@ -4,20 +4,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from sklearn.base import BaseEstimator, TransformerMixin
-
-
-# Custom Transformer
-
-
-class AreaPerBedroomTransformer(BaseEstimator, TransformerMixin):
-    def fit(self, X, y=None):
-        return self
-
-    def transform(self, X):
-        X = X.copy()
-        X['area_per_bedroom'] = X['area'] / X['bedroom'].replace(0, 1)
-        return X
-
+from transformer import AreaPerBedroomTransformer
 
 # Load trained pipeline
 try:
