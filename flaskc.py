@@ -3,7 +3,6 @@ from flask_cors import CORS
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.base import BaseEstimator, TransformerMixin
 from transformer import AreaPerBedroomTransformer
 
 # Load trained pipeline
@@ -58,7 +57,3 @@ def predict():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 400
-
-
-if __name__ == "__main__":
-    app.run(port=5000, debug=True)
