@@ -7,7 +7,7 @@ from transformer import AreaPerBedroomTransformer
 
 # Load trained pipeline
 try:
-    model = joblib.load("best_model.pkl")
+    model = joblib.load("best_model_fixed.pkl")
 except FileNotFoundError:
     raise FileNotFoundError("Model file 'best_model.pkl' not found.")
 
