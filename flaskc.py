@@ -122,4 +122,5 @@ def predict():
         })
 
     except Exception as e:
+        print('Hello Internal Error')
         return jsonify({"error": str(e)}), 400
